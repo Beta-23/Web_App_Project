@@ -10,7 +10,7 @@ module SessionsHelper
 
   def logged_in?
     if current_user == nil
-      redirect_to "sign_in"
+      redirect_to "signin"
     end
   end
   
@@ -18,4 +18,4 @@ module SessionsHelper
     @current_user = session[:user_id] = nil
   end
 
- end 
+end 

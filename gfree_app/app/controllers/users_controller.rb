@@ -21,4 +21,8 @@ class UsersController < ApplicationController
     render :show
   end
 
+  # def destroy
+  #   current_user.destroy
+  # end
+
 end

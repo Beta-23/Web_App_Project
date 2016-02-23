@@ -8,6 +8,14 @@
 </head>
 <body>
 	<h1>Welcome to I'm_____Free!</h1>
+	<%= link_to "Let's go Home", root_path %>
+
+	<!-- if user is logged-in, show a logout button and vise versa -->
+	<% if current_user %>
+	<%= link_to "Log out", logout_path %>
+	<% else %>
+	<%= link_to "Sign In", signin_path %>
+	<% end %>
 
 	<%= yield %>
 
