@@ -8,11 +8,11 @@
 </head>
 <body>
 	<h1>Welcome to I'm_____Free!</h1>
-	<%= link_to "Let's go Home", root_path %>
+	<%= link_to "Let's go Home", root_path %> <br>
 
 	<!-- if user is logged-in, show a logout button and vise versa -->
 	<% if current_user %>
-	<%= link_to "Log out", logout_path %>
+	<%= link_to "Log out", logout_path, method: :delete %> <br>
 	<% else %>
 	<%= link_to "Sign In", signin_path %>
 	<% end %>
