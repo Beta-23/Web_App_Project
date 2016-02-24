@@ -6,9 +6,9 @@
 * POST to sessions#create
 
 -->
-<div class="row">
+<div class="column">
 	<div class="span6 offset 3">
-		# <%= form_tag sessions_path do %>
+		<%= form_tag sessions_path do %>
 
 		 <%= label_tag :email %>
 		 <%= text_field_tag :email, params[:email] %>
@@ -17,7 +17,7 @@
 		 <%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
 <% end %>
 
-	<p> New User? <%= link_to "Get Started Now", signin_path %> 
+	<p> New User? <%= link_to "Get Started Now", "/users/new" %> 
 	</p>
  </div>
 </div> 	

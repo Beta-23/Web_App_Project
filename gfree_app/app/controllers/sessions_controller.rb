@@ -21,10 +21,7 @@ class SessionsController < ApplicationController
 
     
       # flash.now[:error] = "Something went wrong! Invalid email/password combination"
-   
-
-
-  def destroy
+   def destroy
     logout
     redirect_to root_path
     # TODO: logout the user and redirect home

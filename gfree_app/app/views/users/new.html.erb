@@ -1,20 +1,27 @@
+<h1>Get Started!</h1>
+
 <%= form_for @user do |f| %>
 
 <div>
-	<% f.text_field :first_name, placeholder: "First Name" %>
+	<%= f.text_field :first_name, placeholder: "First Name" %>
 </div>
 
 <div>
-	<% f.text_field :last_name, placeholder: "Last Name" %>
+	<%= f.text_field :last_name, placeholder: "Last Name" %>
 </div>
 
 <div>
-	<% f.text_field :email, placeholder: "Your Email" %>
+	<%= f.text_field :email, placeholder: "Your Email" %>
 </div>
 
 <div>
-	<% f.password_field :password, placeholder: "password" %>
+	<%= f.password_field :password, placeholder: "password" %>
 </div>
+
+<div>
+	<%= f.password_field :password, placeholder: "confirm password" %>
+</div>
+<br>
 
 <%= f.submit "Continue" %>
 <% end %>
