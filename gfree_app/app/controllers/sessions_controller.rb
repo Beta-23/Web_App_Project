@@ -27,6 +27,8 @@ class SessionsController < ApplicationController
 
 
   def destroy
+    logout
+    redirect_to root_path
     # TODO: logout the user and redirect home
   end
 end
