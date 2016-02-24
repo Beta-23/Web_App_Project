@@ -10,14 +10,12 @@ class SessionsController < ApplicationController
   
   def create
     session_params = params.permit(:email, :password)
-    @user = User.confirm(session_params)
-    if @user
-      login(@user)
-      redirect_to "/users/#{@user.id}"
-
+    user = User.confirm(session_params)
+    if user
+      login(user)
+      redirect_to current_user
     else
-      redirect_to "/signin"
-        
+      redirect_to signin_path 
     end
   end      
 
