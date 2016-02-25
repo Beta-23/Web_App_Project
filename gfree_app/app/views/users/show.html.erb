@@ -1,7 +1,12 @@
 <h1>Profile Page of <%= @user.first_name %></h1>
 <%= link_to "Log out", logout_path, method: :delete %> <br>
 
-<h2>Your selected free-allergies and restaurants!</h2>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:term, "type_allergy:") %>
+  <%= text_field_tag(:term) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<h2>Your requested free-allergies restaurants!</h2>
 
 <% @user.type_allergys.each do |type_allergy| %>
   <div>
