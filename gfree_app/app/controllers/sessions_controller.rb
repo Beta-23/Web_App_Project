@@ -5,8 +5,7 @@ class SessionsController < ApplicationController
     render :new
   end
 
-  #  create `create` action that logs-in the user and redirects somewhere
-    # before you login a user, check to see email & password match with `User.confirm(_, _)` method
+    #TODO: before you login a user, check to see email & password match with `User.confirm(_, _)` method
   
   def create
     session_params = params.permit(:email, :password)
@@ -25,6 +24,6 @@ class SessionsController < ApplicationController
    def destroy
     logout
     redirect_to root_path
-    # TODO: logout the user and redirect home
+    # logout the user and redirect home
   end
 end
