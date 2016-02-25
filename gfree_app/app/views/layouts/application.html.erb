@@ -9,16 +9,15 @@
 <body>
 	<h1>Welcome to G-Free!</h1>
 	
-
-	
 	<!-- if user is logged-in, show a logout button and vise versa -->
 	<% if current_user %>
 	<%= link_to "Log out", logout_path, method: :delete %> <br>
 	<% else %>
 	<%= link_to "Sign In", signin_path %>
+
 	<% end %>
 
-	<%= yield %>
+<%= yield %>
 
 </body>
 </html>

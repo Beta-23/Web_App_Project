@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController
   def new
     @user = User.new
-    # TODO: create login form for view
+    # create login form for view
     render :new
   end
 
-  # TODO: create `create` action that logs-in the user and redirects somewhere
+  #  create `create` action that logs-in the user and redirects somewhere
     # before you login a user, check to see email & password match with `User.confirm(_, _)` method
   
   def create
@@ -14,13 +14,14 @@ class SessionsController < ApplicationController
     if user
       login(user)
       redirect_to current_user
+
     else
+      flash.now[:error] = "Something went wrong! Invalid email/password combination"
       redirect_to signin_path 
     end
   end      
 
     
-      # flash.now[:error] = "Something went wrong! Invalid email/password combination"
    def destroy
     logout
     redirect_to root_path

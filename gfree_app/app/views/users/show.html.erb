@@ -1,2 +1,11 @@
 <h1>Profile Page of <%= @user.first_name %></h1>
 <%= link_to "Log out", logout_path, method: :delete %> <br>
+
+<h2>Your selected free-allergies and restaurants!</h2>
+
+<% @user.type_allergys.each do |type_allergy| %>
+  <div>
+    <h3><%= type_allergy.type_allergy %></h3>
+  </div>
+  <br>
+<% end %>
