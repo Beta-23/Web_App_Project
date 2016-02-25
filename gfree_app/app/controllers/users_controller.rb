@@ -11,8 +11,15 @@ class UsersController < ApplicationController
   end  
 
   def create
-    user_params = params.require(:user).permit(:first_name, :last_name, :email, :type_allergy, :password)
+    user_params = params.require(:user).permit(:first_name, :last_name, :email, :password)
     @user = User.create(user_params)
+    
+    allergies = params[:type_allergy].values
+    # allergies = ["gluten", "peanut", "dairy"]
+    allergies.each do |allergy|
+      type_allergy = TypeAllergy.where(type_allergy: allergy).first
+      user_allergy = TypeAllergyUser.create(user_id: @user.id, type_allergy_id: type_allergy.id)
+    end
     redirect_to user_path(@user)
   end
 

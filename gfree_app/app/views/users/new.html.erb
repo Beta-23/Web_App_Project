@@ -1,4 +1,4 @@
-<h1>Get Started!</h1>
+<h1>Get Started!</h1> <br>
 
 <%= form_for @user do |f| %>
 
@@ -22,6 +22,15 @@
 	<%= f.password_field :password, placeholder: "confirm password" %>
 </div>
 <br>
+
+<h2> I'm ___ Free!</h2>
+
+
+
+<input type="checkbox" name="type_allergy[gluten]" value="gluten"> Gluten<br>
+<input type="checkbox" name="type_allergy[dairy]" value="dairy"> Dairy<br>
+<input type="checkbox" name="type_allergy[peanuts]" value="peanuts"> Peanuts <br>
+
 
 <%= f.submit "Continue" %>
 <% end %>
