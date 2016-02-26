@@ -1,4 +1,4 @@
-<h3>Hi <%= @user.first_name %>, your worry free dinning starts here.</h3>
+<h3>Hi <%= @user.first_name %>, your worry free dining starts here.</h3>
 <%= link_to "Log out", logout_path, method: :delete %> <br>
 
 <%= form_tag("/search", method: "get") do %>
@@ -6,7 +6,7 @@
   <%= text_field_tag(:term) %>
   <%= submit_tag("Search") %>
 <% end %>
-<h3>Your free-allergies restaurants!</h3>
+<h3>Your allergy-free restaurants!</h3>
 
 
 <% @user.type_allergys.each do |type_allergy| %>
