@@ -6,7 +6,8 @@ I. Description:
 
 G-free! is an application that allows users to find allergen friendly restaurants their current location. Users set up their allergy profile when they first singup and a location map automatically loads on the results page. Users can also see the top rated restaurants in the area and if any of their friends are near or at their favorites restaurants.
 
-Link to-->Huruko
+Link to--
+[a link](https://damp-anchorage-26628.herokuapp.com)
 
 Link to wireframes-->
 
