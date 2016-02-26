@@ -1,4 +1,4 @@
-== README
+# README
 
 February 26, 2016
 
@@ -6,17 +6,17 @@ I. Description:
 
 G-free! is an application that allows users to find allergen friendly restaurants their current location. Users set up their allergy profile when they first singup and a location map automatically loads on the results page. Users can also see the top rated restaurants in the area and if any of their friends are near or at their favorites restaurants.
 
-Link to-->Huruko
+Link to site:
+[Gfree](https://damp-anchorage-26628.herokuapp.com)
 
-Link to wireframes-->
+Link to ERD and Wireframes--> [On Github](https://github.com/Beta-23/Web_App_Project/tree/master/ERD%20and%20Wireframes)
 
 Link to User Stories-->
 
 As a: G-Free Consumer; I need: an instant view of all G-Free restaurants in my current location; So I can: have a worry free dinning experience.
 
-Link to Models-->
 
-Prokect Management tool-->
+Prokect Management tool-->[Asana](https://asana.com/)
 
 II. How Was This Project Built:
 
@@ -73,4 +73,3 @@ gem 'pry-rails'
 group :development do
 gem 'web-console', '~> 2.0'
 gem 'spring'
-
