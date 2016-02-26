@@ -13,7 +13,12 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
-
+	<div class='container'>
+	<div class='navbar-header'>
+		
+	<div class='navbar-brand'>Welcome to G-Free!</div>
+	</div>
+		
 	
 	<ul class='nav navbar-nav navbar-right'>
 	<!-- if user is logged-in, show a logout button and vise versa -->
@@ -24,8 +29,9 @@
 
 		<% end %>
 		</ul>
+		</div>
 	</nav>
-	<h1>Welcome to G-Free!</h1>
+	
 <%= yield %>
 
 <%= console %>

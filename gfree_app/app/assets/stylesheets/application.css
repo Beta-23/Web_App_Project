@@ -21,6 +21,7 @@ body {
 
 h1 {
 	font-family: 'Fredericka the Great', cursive;
+
 }
 
 h2 {
@@ -31,3 +32,25 @@ h2 {
 .nav-links {
 	margin-right: 20px;
 }
+
+.navbar-brand {
+	
+	font-family: 'Fredericka the Great', cursive;
+}
+
+.container {
+	display: inline-block;
+    list-style-type: none;
+}
+
+
+
+.navbar-header {
+    float: left;
+    text-align: right;
+    width: 60%;
+    text-size: 50;
+}
+.navbar-brand {float:none;}
+
+
