@@ -13,15 +13,14 @@ class YelpController < ApplicationController
       })
     response = Yelp.client.search('San Francisco', parameters)
     businesses = response.businesses
-    results = []
-    businesses.each do  |business|
-      business.name
-      results << { name: business.name }
+    @results = businesses.map do |business|
+      {name: business.name, categories: business.categories}
     end
+    render :search
+
     # TODO: iterate over businesses
     # TODO: add relevant data to array of business objects
     # TODO: render page with data
-    render json: results
     # TODO: render :results # need to make results.html.erb
   end
 end

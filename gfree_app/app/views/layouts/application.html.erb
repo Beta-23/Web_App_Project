@@ -2,12 +2,18 @@
 <html>
 <head>
   <title>GfreeApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+     <%= javascript_include_tag 'application' %>
+     <%= csrf_meta_tags %>
+     
+  
 </head>
 <body>
-	<h1>Welcome to G-Free!</h1>
+	<nav class="navbar navbar-default navbar-fixed-top">
+
+	
 	
 	<!-- if user is logged-in, show a logout button and vise versa -->
 	<% if current_user %>
@@ -15,9 +21,12 @@
 	<% else %>
 	<%= link_to "Sign In", signin_path %>
 
-	<% end %>
-
+		<% end %>
+	</nav>
+	<h1>Welcome to G-Free!</h1>
 <%= yield %>
+
+<%= console %>
 
 </body>
 </html>
