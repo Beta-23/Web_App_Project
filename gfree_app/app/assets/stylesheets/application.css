@@ -18,3 +18,16 @@ body {
 	padding: 50px;
 	background-color: lightblue;
 }
+
+h1 {
+	font-family: 'Fredericka the Great', cursive;
+}
+
+h2 {
+
+	font-family: 'Amatic SC', cursive;
+}
+
+.nav-links {
+	margin-right: 20px;
+}

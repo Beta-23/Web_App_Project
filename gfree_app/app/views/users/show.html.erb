@@ -1,17 +1,17 @@
-<h1>Profile Page of <%= @user.first_name %></h1>
+<h3>Hi <%= @user.first_name %>, your worry free dinning starts here.</h3>
 <%= link_to "Log out", logout_path, method: :delete %> <br>
 
 <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:term, "type_allergy:") %>
+  <%= label_tag(:term, "Search restaurants by allergen:") %>
   <%= text_field_tag(:term) %>
   <%= submit_tag("Search") %>
 <% end %>
-<h2>Your free-allergies restaurants!</h2>
+<h3>Your free-allergies restaurants!</h3>
 
 
 <% @user.type_allergys.each do |type_allergy| %>
   <div>
-    <h3><%= type_allergy.type_allergy %></h3>
+    <h2><%= type_allergy.type_allergy %></h2>
   </div>
   <br>
 <% end %>
