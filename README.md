@@ -13,7 +13,7 @@ Link to ERD and Wireframes--> [On Github](https://github.com/Beta-23/Web_App_Pro
 
 Link to User Stories-->
 
-As a: G-Free Consumer; I need: an instant view of all G-Free restaurants in my current location; So I can: have a worry free dinning experience.
+As a G-Free Consumer; I need: an instant view of all G-Free restaurants in my current location; So I can: have a worry free dinning experience.
 
 
 Prokect Management tool-->[Asana](https://asana.com/)
