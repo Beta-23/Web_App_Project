@@ -1,0 +1,17 @@
+<h3>Hi <%= @user.first_name %>, your worry free dining starts here.</h3>
+<%= link_to "Log out", logout_path, method: :delete %> <br>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:term, "Search restaurants by allergen:") %>
+  <%= text_field_tag(:term) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<h3>Your allergy-free restaurants!</h3>
+
+
+<% @user.type_allergys.each do |type_allergy| %>
+  <div>
+    <h2><%= type_allergy.type_allergy %></h2>
+  </div>
+  <br>
+<% end %>

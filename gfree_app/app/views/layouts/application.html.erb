@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GfreeApp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Amatic+SC:700' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+     <%= javascript_include_tag 'application' %>
+     <%= csrf_meta_tags %>
+     
+  
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class='container'>
+	<div class='navbar-header'>
+		
+	<div class='navbar-brand'>Welcome to G-Free!</div>
+	</div>
+		
+	
+	<ul class='nav navbar-nav navbar-right'>
+	<!-- if user is logged-in, show a logout button and vise versa -->
+	<% if current_user %>
+	<li class='nav-links'><%= link_to "Log out", logout_path, method: :delete %></li> <br>
+	<% else %>
+	<li class='nav-links'><%= link_to "Sign In", signin_path %></li>
+
+		<% end %>
+		</ul>
+		</div>
+	</nav>
+	
+<%= yield %>
+
+
+</body>
+</html>
